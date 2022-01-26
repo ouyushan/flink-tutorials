@@ -47,6 +47,7 @@ under the License.
 		<log4j.version>2.13.3</log4j.version>
 		<metrics.version>4.1.0</metrics.version>
 		<mysql.version>8.0.20</mysql.version>
+		<schema.registry.version>0.10.0.7.2.12.0-291</schema.registry.version>
 
 		<!-- Plugin versions -->
 		<avro.plugin.version>1.9.1</avro.plugin.version>
@@ -151,6 +152,12 @@ under the License.
 			</dependency>
 
 			<!--  Everything else  -->
+			<dependency>
+				<groupId>com.hortonworks.registries</groupId>
+				<artifactId>schema-registry-serdes</artifactId>
+				<version>${schema.registry.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>org.apache.hive</groupId>
 				<artifactId>hive-exec</artifactId>

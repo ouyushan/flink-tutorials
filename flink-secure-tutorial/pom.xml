@@ -74,6 +74,20 @@ under the License.
 		<dependency>
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-avro-cloudera-registry</artifactId>
+			<!-- The released schema registry version can be different. Since Flink and CDH are
+			released simultanously for public cloud, we cannot expect to have Flink's dependency
+			available publicly -->
+			<exclusions>
+				<exclusion>
+					<groupId>com.hortonworks.registries</groupId>
+					<artifactId>schema-registry-serdes</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.hortonworks.registries</groupId>
+			<artifactId>schema-registry-serdes</artifactId>
 		</dependency>
 
 		<!-- Add connector dependencies here. They must be in the default scope (compile). -->
